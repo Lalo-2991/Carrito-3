@@ -15,16 +15,29 @@
     <main class="container">
       <article class="row justify-content-center text-center mt-5">
         <div class="card col-3 m-2 p-3">
-          <p class="fs-3">Fresa🍓</p>
-          <button class="btn btn-primary" data-fruta="Fresa">Agregar</button>
+          <h5 class="fs-3">Fresa🍓</h5>
+          <p class="lead">$300</p>
+          <button class="btn btn-primary" data-fruta="Fresa" data-precio="300">
+            Agregar
+          </button>
         </div>
         <div class="card col-3 m-2 p-3">
-          <p class="fs-3">Banana🍌</p>
-          <button class="btn btn-primary" data-fruta="Banana">Agregar</button>
+          <h5 class="fs-3">Banana🍌</h5>
+          <p class="lead">$100</p>
+          <button class="btn btn-primary" data-fruta="Banana" data-precio="100">
+            Agregar
+          </button>
         </div>
         <div class="card col-3 m-2 p-3">
-          <p class="fs-3">Manzana🍏</p>
-          <button class="btn btn-primary" data-fruta="Manzana">Agregar</button>
+          <h5 class="fs-3">Manzana🍏</h5>
+          <p class="lead">$200</p>
+          <button
+            class="btn btn-primary"
+            data-fruta="Manzana"
+            data-precio="200"
+          >
+            Agregar
+          </button>
         </div>
       </article>
     </main>
@@ -33,12 +46,34 @@
       <ul class="list-group" id="carrito"></ul>
     </section>
 
+    <footer id="footer" class="container mt-3">
+      <template id="templateFooter">
+        <div class="card">
+          <div
+            class="cardbody d-flex justify-content-around align-items-center"
+          >
+            <p class="fs-3 mb-0">Total $<span>1500</span></p>
+            <button class="btn btn-outline-primary">Finalizar compra</button>
+          </div>
+        </div>
+      </template>
+    </footer>
+
     <template id="template">
+      <li class="list-group-item bg-secondary text-white">
+        <span class="badge bg-primary rounded-pill">12</span>
+        <span class="lead text-uppercase align-middle">Fresa🍓</span>
+      </li>
       <li
         class="list-group-item d-flex justify-content-between align-items-center"
       >
-        <span class="lead">Fresa🍓</span>
-        <span class="badge bg-primary rounded-pill">12</span>
+        <div>
+          <p class="lead mb-0">Total $<span>500</span></p>
+        </div>
+        <div>
+          <button class="btn btn-success btn-sm">Agregar</button>
+          <button class="btn btn-danger btn-sm">Quitar</button>
+        </div>
       </li>
     </template>
 
